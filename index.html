@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dog Pet Shop | Alimento y Accesorios</title>
+    <link rel="icon" type="image/jpg" href="images/logo.png.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png.jpg" alt="Logo New Dog Pet Shop" class="header-logo">
+            <h1 class="site-title">New Dog <span>Pet Shop</span></h1>
+        </div>
+        <div class="cart-button" onclick="toggleCart()">
+            🛒 Carrito <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Todo lo que tu mascota necesita, con un servicio <strong>Premium</strong>.</h2>
+        <p>Alimentos de alta gama para perros y gatos. ¡Envío rápido!</p>
+    </section>
+
+    <main class="products-section">
+        <h2 class="section-title">Nuestros Productos</h2>
+
+        <nav class="filters">
+            <select id="filterType" onchange="filterProducts()">
+                <option value="all">Tipo: Todos</option>
+                <option value="perro">Perro 🐕</option>
+                <option value="gato">Gato 🐈</option>
+            </select>
+            <select id="filterStage" onchange="filterProducts()">
+                <option value="all">Etapa: Todas</option>
+                <option value="cachorro">Cachorros</option>
+                <option value="adulto">Adultos</option>
+                <option value="terapia">Terapia</option>
+            </select>
+            <select id="filterBrand" onchange="filterProducts()">
+                <option value="all">Marca: Todas</option>
+            </select>
+            <input type="text" id="searchBar" oninput="filterProducts()" placeholder="Buscar por nombre...">
+        </nav>
+
+        <div id="productsGrid" class="products-grid">
+            </div>
+    </main>
+
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>🛒 Tu Carrito</h3>
+            <button class="cart-close-btn" onclick="toggleCart()">✖</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            </div>
+        <div class="cart-summary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Finalizar Compra por WhatsApp</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Sobre Nosotros</h3>
+                <p>Tu tienda de confianza para el cuidado premium de perros y gatos. Nutrición y accesorios de alta calidad.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/newdog.petshop/" target="_blank" class="social-icon instagram-icon" title="Síguenos en Instagram">
+                        📸 Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p>📧 Email: <a href="mailto:contacto@newdog.com">contacto@newdog.com</a></p>
+                <p>📱 Teléfono: <a href="https://wa.me/59896500718" target="_blank">+598 96 500 718</a></p>
+            </div>
+
+            <div class="footer-section location">
+                <h3>Ubicación</h3>
+                <p>📍 Dirección: <a href="http://googleusercontent.com/maps.google.com/search?q=Calle+Ficticia+1234,+Montevideo" target="_blank">Ver en Mapa</a></p>
+                <p>🕑 Horario: Lun a Vie, 9:00 - 18:00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 New Dog Pet Shop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

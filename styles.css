@@ -1,0 +1,627 @@
+/* Nuevo styles.css Moderno con Naranja y Blanco */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta Principal: Naranja y Blanco */
+    --naranja-principal: #FF5100; /* Naranja vibrante para CTA y acento */
+    --naranja-secundario: #FF7033; /* Más suave que el anterior */
+    --blanco: #FFFFFF;
+    --gris-claro: #F8F8F8; /* Fondo muy claro */
+    --gris-medio: #EAEAEA; /* Para bordes y separadores */
+    --gris-oscuro: #1A1A1A; /* Ligeramente más oscuro para mejor contraste */
+    --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra más amplia y sutil */
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Contenedor Principal */
+.products-section {
+    max-width: 1200px; 
+    margin: 2rem auto;
+    padding: 0 3rem;
+}
+
+/* ========================================================================= */
+/* HEADER Y NAVEGACIÓN */
+/* ========================================================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: var(--blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* MEJORA 1: Sombra y sin borde inferior para hacerlo flotar */
+    border-bottom: none; 
+    box-shadow: var(--sombra-card); 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* MEJORA 2: Título más grande, oscuro y segmentado */
+.site-title {
+    font-size: 1.8rem; 
+    color: var(--gris-oscuro); 
+    font-weight: 800;
+}
+
+.site-title span {
+    color: var(--naranja-principal); /* Solo la palabra 'Pet Shop' en naranja */
+}
+
+.cart-button {
+    background-color: var(--naranja-principal);
+    color: var(--blanco);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+.cart-button:hover {
+    background-color: var(--naranja-secundario);
+    transform: translateY(-1px);
+}
+
+#cartCount {
+    margin-left: 5px;
+    background-color: var(--blanco);
+    color: var(--naranja-principal);
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ========================================================================= */
+/* HERO SECTION */
+/* ========================================================================= */
+
+/* MEJORA 3: Hero section más grande y con contraste */
+.hero {
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    padding: 5rem 3rem; /* Más padding vertical */
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.hero h2 {
+    font-size: 3.5rem; /* Título más grande */
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.3rem; /* Párrafo más grande */
+    color: #444;
+    font-weight: 500;
+}
+
+
+/* ========================================================================= */
+/* FILTROS Y TÍTULO DE SECCIÓN */
+/* ========================================================================= */
+
+/* MEJORA 4: Título de Sección - Más moderno y centrado con subrayado */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 2.5rem; /* Aumento la separación inferior */
+    display: table; /* Hace que el ancho se ajuste al contenido */
+    margin-left: auto; /* Centra el elemento 'display:table' */
+    margin-right: auto; /* Centra el elemento 'display:table' */
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--naranja-principal); /* Subrayado más grueso */
+    line-height: 1.2;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: var(--sombra-card);
+}
+
+.filters select,
+.filters input {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--gris-medio);
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filters select:focus,
+.filters input:focus {
+    border-color: var(--naranja-principal);
+    box-shadow: 0 0 0 3px rgba(255, 81, 0, 0.2);
+    outline: none;
+}
+
+
+/* ========================================================================= */
+/* PRODUCTOS */
+/* ========================================================================= */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* MEJORA 5: Product Card - Más moderno, limpio y con mejor hover */
+.product-card {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card); /* Sombra inicial sutil */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 1px solid var(--gris-medio); /* Añadimos un borde sutil */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Desplazamiento más notorio */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Sombra más grande al pasar el mouse */
+}
+
+.image-container {
+    padding: 20px;
+    background-color: var(--gris-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.no-image-placeholder {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    height: 100%;
+    padding: 20px;
+}
+
+.product-info {
+    padding: 1rem 1.2rem; /* Ligeramente más padding para que respire */
+    flex-grow: 1; /* Asegura que el info ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MEJORA 6: Estilos de texto en la tarjeta */
+.product-brand {
+    font-size: 0.85rem;
+    color: var(--naranja-principal); /* La marca en el color principal */
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.product-details {
+    margin-top: auto; /* Empuja el precio y el botón hacia abajo */
+}
+
+.product-details p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.product-price {
+    font-size: 1.8rem; /* Precio más grande y claro */
+    color: var(--naranja-principal);
+    font-weight: 800;
+    margin: 0.7rem 0 0.7rem 0; /* Espaciado ajustado */
+}
+
+/* MEJORA 7: Botón de Carrito - Elegante y oscuro */
+.add-to-cart-btn {
+    width: 100%;
+    background-color: var(--gris-oscuro); /* Botón en color oscuro para un look más elegante */
+    color: var(--blanco);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px; 
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--naranja-principal); /* Naranja al hacer hover */
+    transform: translateY(-1px);
+}
+
+/* ========================================================================= */
+/* CARRITO DESLIZABLE (OFF-CANVAS) */
+/* ========================================================================= */
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* MEJORA 8: Fondo más oscuro */
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1500;
+    display: none;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* MEJORA 9: Un poco más ancho */
+    width: 380px; 
+    height: 100%;
+    background-color: var(--blanco);
+    /* MEJORA 10: Sombra más pronunciada */
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.15); 
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+.cart-drawer.active {
+    transform: translateX(0);
+}
+
+/* MEJORA 11: Header del carrito oscuro y con buen contraste */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris-oscuro); 
+    color: var(--blanco);
+    padding: 1.2rem;
+    flex-shrink: 0;
+}
+
+.cart-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--blanco);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.cart-close-btn:hover {
+    opacity: 1;
+}
+
+.cart-items {
+    padding: 0 1.2rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* Estilos para los Items dentro del Carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--gris-oscuro);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: var(--naranja-principal);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.cart-item-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.qty-btn {
+    background-color: var(--gris-medio);
+    color: var(--gris-oscuro);
+    border: none;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: var(--naranja-principal);
+    color: var(--blanco);
+}
+
+.cart-summary {
+    padding: 1.2rem;
+    border-top: 1px solid var(--gris-medio);
+    flex-shrink: 0;
+    background-color: var(--gris-claro);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cart-total span:last-child {
+    color: var(--naranja-principal);
+}
+
+/* MEJORA 12: Botón de Checkout - Impactante */
+.checkout-btn {
+    width: 100%;
+    background-color: var(--naranja-principal);
+    color: var(--blanco);
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 81, 0, 0.4);
+}
+
+.checkout-btn:hover {
+    background-color: var(--gris-oscuro); /* Hover en gris oscuro para contraste */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* ========================================================================= */
+/* FOOTER */
+/* ========================================================================= */
+
+/* MEJORA 13: Footer - Diseño Oscuro y Elegante */
+.footer {
+    background-color: var(--gris-oscuro);
+    color: var(--gris-claro);
+    padding: 3rem 3rem;
+    margin-top: 3rem;
+    line-height: 1.8;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem; /* Espacio entre secciones */
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Asegura que no se colapse en pantallas medias */
+}
+
+/* MEJORA 14: Títulos del Footer con detalle */
+.footer-section h3 {
+    color: var(--naranja-secundario); /* Títulos de sección en naranja */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    border-left: 3px solid var(--naranja-principal); /* Detalle estético */
+    padding-left: 10px;
+}
+
+/* Estilo de los Enlaces del Footer */
+.footer a {
+    color: var(--gris-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--naranja-principal);
+    text-decoration: underline;
+}
+
+/* Enlaces Sociales */
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    /* MEJORA 15: Botones más redondeados */
+    border-radius: 30px; 
+    background-color: var(--naranja-principal);
+    color: var(--blanco) !important;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none !important;
+}
+
+.social-icon:hover {
+    background-color: var(--naranja-secundario);
+    color: var(--blanco) !important;
+    text-decoration: none !important;
+    transform: translateY(-1px);
+}
+
+/* Derechos de autor */
+.footer-bottom {
+    /* MEJORA 16: Línea más visible y con más espacio */
+    border-top: 1px solid rgba(255, 255, 255, 0.15); 
+    padding-top: 1.5rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ========================================================================= */
+/* RESPONSIVE */
+/* ========================================================================= */
+@media (max-width: 1024px) {
+    .products-section {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 1.5rem;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem;
+    }
+
+    .filters select,
+    .filters input {
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    /* El carrito lateral tiene un máximo de 90% de ancho en el drawer */
+    .cart-drawer {
+        width: 90%; 
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+}
