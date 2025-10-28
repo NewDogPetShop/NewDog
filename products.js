@@ -8,7 +8,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "1 kg", 
         price: 450, 
-        image: "images/toymini1k.png", 
+        image: "https://bestforpets.cl/tienda/10016-large_default/nutrique-toy-mini-puppy.jpg", 
         icon: "🐕" 
     },
     { 
@@ -19,7 +19,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "3 kg", 
         price: 1250, 
-        image: "images/toymini3k.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_825360-MLA92379960690_092025-O.webp", 
         icon: "🐕" 
     },
     { 
@@ -30,7 +30,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "1 kg", 
         price: 450, 
-        image: "images/puppymedium.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_903652-MLU80003807200_102024-O.webp", 
         icon: "🐕" 
     },
     { 
@@ -41,7 +41,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "3 kg", 
         price: 1250, 
-        image: "images/puuppy3kmed.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_903652-MLU80003807200_102024-O.webp", 
         icon: "🐕" 
     },
     { 
@@ -52,7 +52,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "12 kg", 
         price: 3500, 
-        image: "images/puppymedium.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_903652-MLU80003807200_102024-O.webp", 
         icon: "🐕" 
     },
     { 
@@ -63,7 +63,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "1 kg", 
         price: 450, 
-        image: "images/largepuppy.png", 
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIF5Q8KM0S4VSZprDaga_nh3v1fHOXMt_vJg&s", 
         icon: "🐕" 
     },
     { 
@@ -74,7 +74,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "15 kg", 
         price: 4200, 
-        image: "images/largepuppy.png", 
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIF5Q8KM0S4VSZprDaga_nh3v1fHOXMt_vJg&s", 
         icon: "🐕" 
     },
     { 
@@ -85,7 +85,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "12 kg", 
         price: 3800, 
-        image: "images/momandbaby.png", 
+        image: "https://tiendademascotasar.vtexassets.com/arquivos/ids/159528-800-auto?v=638071505811570000&width=800&height=auto&aspect=true", 
         icon: "🐕" 
     },
 
@@ -98,7 +98,7 @@ const allProducts = [
         stage: "adulto", 
         weight: "7.5 kg", 
         price: 2400, 
-        image: "images/toyminiadult.png", 
+        image: "https://palacioanimal.com.ar/imagenes/publicaciones/611742/0_thumb_611742_21ae3027f7890f8d71abe83556b76092.webp", 
         icon: "🐕" 
     },
     { 
@@ -109,7 +109,7 @@ const allProducts = [
         stage: "adulto", 
         weight: "12 kg", 
         price: 3500, 
-        image: "images/mediumadult.png", 
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGZmVUfaYUIYQRn_dRaM6A-sfdgoU5ipioWQ&s", 
         icon: "🐕" 
     },
     { 
@@ -120,7 +120,7 @@ const allProducts = [
         stage: "adulto", 
         weight: "15 kg", 
         price: 4500, 
-        image: "images/senior.png", 
+        image: "http://petify.uy/web/wp-content/uploads/nutrique-envase-perro-young-large-e1707408782121.webp", 
         icon: "🐕" 
     },
     { 
@@ -131,7 +131,7 @@ const allProducts = [
         stage: "senior", 
         weight: "7.5 kg", 
         price: 2400, 
-        image: "images/senior.png", 
+        image: "http://petify.uy/web/wp-content/uploads/nutrique-envase-perro-young-large-e1707408782121.webp", 
         icon: "🐕" 
     },
 
@@ -144,7 +144,7 @@ const allProducts = [
         stage: "cachorro", 
         weight: "7.5 kg", 
         price: 2600, 
-        image: "images/gatocachorro.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_834098-MLU73581767355_122023-O.webp", 
         icon: "🐈" 
     },
     { 
@@ -155,7 +155,7 @@ const allProducts = [
         stage: "adulto", 
         weight: "7.5 kg", 
         price: 2400, 
-        image: "images/gatoadulto.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_787219-MLA93504626231_092025-O.webp", 
         icon: "🐈" 
     },
     { 
@@ -166,7 +166,7 @@ const allProducts = [
         stage: "senior", 
         weight: "7.5 kg", 
         price: 2400, 
-        image: "images/gatosenior.png", 
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWufSYMxRs6mwY_Sz8pLVxTj8zT0x9pmmWoQ&s", 
         icon: "🐈" 
     },
 
@@ -179,7 +179,7 @@ const allProducts = [
         stage: "terapia", 
         weight: "2 kg", 
         price: 1500, 
-        image: "images/cardiaco2kg.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_758489-MLC51470679437_092022-O.webp", 
         icon: "⚕️" 
     },
     { 
@@ -190,7 +190,7 @@ const allProducts = [
         stage: "terapia", 
         weight: "15 kg", 
         price: 5800, 
-        image: "images/cardiaco.png", 
+        image: "http://mundoanimalsantafe.com.ar/wp-content/uploads/2020/04/hypo_caninos-1-300x300.png", 
         icon: "⚕️" 
     },
 
@@ -203,7 +203,7 @@ const allProducts = [
         stage: "adulto", 
         weight: "15 kg", 
         price: 1800, 
-        image: "images/belcan15kg.png", 
+        image: "https://http2.mlstatic.com/D_NQ_NP_617987-MLU73785265398_012024-O.webp", 
         icon: "🐕" 
     },
     { 
@@ -214,7 +214,7 @@ const allProducts = [
         stage: "adulto", 
         weight: "22 kg", 
         price: 2500, 
-        image: "images/belcan22kg.png", 
+        image: "https://www.etra.com.ar/337-thickbox_default/belcan-adulto-x-22-kg.jpg", 
         icon: "🐕" 
     },
 
